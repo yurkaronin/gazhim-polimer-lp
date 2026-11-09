@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Прогрессивное улучшение: вешаем .js до отрисовки, чтобы скрыть
+       reveal-блоки (анимация появления) только при работающем JS и без
+       «мигания» контента. -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Производство полимерного оборудования из полипропилена на заказ | Газхимкомплект</title>
+  <meta name="description" content="Изготовление ёмкостей, ванн, воздуховодов, газоотводов и фторопластовых теплообменников по вашему ТЗ. Полный цикл — от проектирования до доставки по России и СНГ. Расчёт за 1 рабочий день.">
+  <meta name="theme-color" content="#0b1f35">
+
+  <!-- SEO (шаг 14) -->
+  <link rel="canonical" href="https://gazhim-polimer.ru/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph (шаг 14) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Газхимкомплект">
+  <meta property="og:title" content="Производство полимерного оборудования из полипропилена на заказ | Газхимкомплект">
+  <meta property="og:description" content="Изготовление ёмкостей, ванн, воздуховодов, газоотводов и фторопластовых теплообменников по вашему ТЗ. Полный цикл — от проектирования до доставки по России и СНГ. Расчёт за 1 рабочий день.">
+  <meta property="og:url" content="https://gazhim-polimer.ru/">
+  <meta property="og:image" content="https://gazhim-polimer.ru/assets/images/hero-bg.png">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Favicon (шаг 14): ICO (16/32/48) + PNG 192 для Android/Apple -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
+
+  <!-- JSON-LD: Organization + NAP (шаг 14) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ООО «Газхимкомплект»",
+    "url": "https://gazhim-polimer.ru/",
+    "telephone": "+7 (473) 205-13-07",
+    "email": "gazhim@gazhim.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "397160",
+      "addressRegion": "Воронежская область",
+      "addressLocality": "г. Борисоглебск",
+      "streetAddress": "ул. Пролетарская, 22",
+      "addressCountry": "RU"
+    },
+    "taxID": "3609003557",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ОГРН",
+      "value": "1023600613740"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       ШАПКА — шаги 4–6: лого, контакты, CTA, навигация (desktop + мобильная).
+       Карта якорей меню (источник — PROTOTYPE.md, раздел 1 «Шапка»):
+
+         Продукция ▾                      → #products
+           · Ёмкости и резервуары         → #product-tanks
+           · Технологические ванны        → #product-baths
+           · Воздуховоды и газоотводы     → #product-airducts
+           · Фторопластовые теплообменники → #product-heat-exchangers
+           · Поддоны кислотостойкие       → #product-pallets
+         Проектирование и производство     → #process
+         Качество                          → #trust
+         Преимущества                      → #properties
+         Вопросы и ответы (FAQ)            → #faq
+         Контакты                          → #contact
+
+       JS (assets/js/main.js) уже вешает класс .header--scrolled при прокрутке
+       и управляет .mobile-menu / .header__burger / .to-top (шаги 6 и 14).
+       ======================================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Первый ряд: логотип, контакты, CTA, бургер -->
+      <div class="header__top">
+
+        <!-- Логотип — ссылка на первый экран -->
+        <a class="header__logo" href="#hero">
+          <img class="header__logo-img" src="assets/images/logo.png" alt="Газхимкомплект" width="200" height="33">
+        </a>
+
+        <!-- Контакты -->
+        <div class="header__contacts">
+          <a class="header__contact" href="tel:+74732051307">
+            <span class="icon header__contact-icon" aria-hidden="true">call</span>
+            <span class="header__contact-label">+7 (473) 205-13-07</span>
+          </a>
+          <a class="header__contact header__contact--email" href="mailto:gazhim@gazhim.ru">
+            <span class="icon header__contact-icon" aria-hidden="true">mail</span>
+            <span class="header__contact-label">gazhim@gazhim.ru</span>
+          </a>
+        </div>
+
+        <!-- CTA -->
+        <a class="btn btn--gold header__cta" href="#contact">
+          <span class="header__cta-full">Получить расчёт</span>
+          <span class="header__cta-short">Расчёт</span>
+        </a>
+
+        <!-- Кнопка-бургер (мобильные) — шаг 6. Видна только там, где desktop-навигация скрыта (≤992px). -->
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">
+          <span class="icon" aria-hidden="true">menu</span>
+        </button>
+
+      </div>
+
+      <!-- Второй ряд: навигация (desktop) — шаг 5 -->
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+          <li class="header__item header__item--dropdown">
+            <a class="header__link" href="#products" aria-haspopup="true">
+              <span>Продукция</span>
+              <span class="icon header__caret" aria-hidden="true">keyboard_arrow_down</span>
+            </a>
+            <div class="header__dropdown">
+              <ul class="header__dropdown-list">
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#product-tanks">Ёмкости и резервуары</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#product-baths">Технологические ванны</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#product-airducts">Воздуховоды и газоотводы</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#product-heat-exchangers">Фторопластовые теплообменники</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#product-pallets">Поддоны кислотостойкие</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#process">Проектирование и производство</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#trust">Качество</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#properties">Преимущества</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#faq">Вопросы и ответы (FAQ)</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#contact">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       МОБИЛЬНОЕ МЕНЮ — шаг 6.
+       Выезжающая справа панель, повторяет карту якорей шапки. «Продукция» —
+       аккордеон (кнопка с aria-expanded), остальные пункты — обычные ссылки.
+       ======================================================================== -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация">
+    <div class="mobile-menu__inner">
+      <ul class="mobile-menu__list">
+
+        <li class="mobile-menu__item">
+          <div class="mobile-menu__group">
+            <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-products">
+              <span>Продукция</span>
+              <span class="icon mobile-menu__caret" aria-hidden="true">keyboard_arrow_down</span>
+            </button>
+            <ul class="mobile-menu__sub" id="mobile-menu-products">
+              <li class="mobile-menu__sub-item">
+                <a class="mobile-menu__sub-link" href="#product-tanks">Ёмкости и резервуары</a>
+              </li>
+              <li class="mobile-menu__sub-item">
+                <a class="mobile-menu__sub-link" href="#product-baths">Технологические ванны</a>
+              </li>
+              <li class="mobile-menu__sub-item">
+                <a class="mobile-menu__sub-link" href="#product-airducts">Воздуховоды и газоотводы</a>
+              </li>
+              <li class="mobile-menu__sub-item">
+                <a class="mobile-menu__sub-link" href="#product-heat-exchangers">Фторопластовые теплообменники</a>
+              </li>
+              <li class="mobile-menu__sub-item">
+                <a class="mobile-menu__sub-link" href="#product-pallets">Поддоны кислотостойкие</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#process">Проектирование и производство</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#trust">Качество</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#properties">Преимущества</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#faq">Вопросы и ответы (FAQ)</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#contact">Контакты</a>
+        </li>
+
+      </ul>
+
+      <!-- Контакты в мобильном меню (шаг 14) -->
+      <div class="mobile-menu__contacts">
+        <a class="mobile-menu__contact" href="tel:+74732051307">
+          <span class="icon mobile-menu__contact-icon" aria-hidden="true">call</span>
+          <span>+7 (473) 205-13-07</span>
+        </a>
+        <a class="mobile-menu__contact" href="mailto:gazhim@gazhim.ru">
+          <span class="icon mobile-menu__contact-icon" aria-hidden="true">mail</span>
+          <span>gazhim@gazhim.ru</span>
+        </a>
+      </div>
+
+      <!-- Соцсети: реальные ссылки (Telegram-канал, MAX) уточнить на этапе интеграции -->
+      <div class="mobile-menu__social">
+        <a class="mobile-menu__social-link" href="https://wa.me/74732051307" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="assets/icons/whatsapp.svg" alt="" width="24" height="24" loading="lazy">
+        </a>
+        <a class="mobile-menu__social-link" href="https://t.me/gazhim" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="assets/icons/telegram.svg" alt="" width="24" height="24" loading="lazy">
+        </a>
+        <a class="mobile-menu__social-link" href="https://max.ru" target="_blank" rel="noopener" aria-label="MAX">
+          <img src="assets/icons/max.svg" alt="" width="24" height="24" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <!-- ======================================================================
+         HERO (первый экран) — шаг 7.
+         Здесь размещается ЕДИНСТВЕННЫЙ H1 страницы:
+         «Производство полимерного оборудования из полипропилена на заказ».
+         ====================================================================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__inner">
+
+          <p class="hero__eyebrow">Собственное производство полного цикла</p>
+
+          <h1 class="hero__title">Производство полимерного оборудования из полипропилена на заказ</h1>
+
+          <p class="hero__offer">Изготовим ёмкости, ванны, воздуховоды, газоотводы и теплообменники по вашему ТЗ. Расчёт стоимости — за 1 рабочий день. Срок изготовления — [от 7 рабочих дней].</p>
+
+          <ul class="hero__benefits">
+            <li class="hero__benefit">
+              <span class="icon hero__benefit-icon" aria-hidden="true">check_circle</span>
+              <span>Работаем с кислотами, щелочами и агрессивными средами</span>
+            </li>
+            <li class="hero__benefit">
+              <span class="icon hero__benefit-icon" aria-hidden="true">check_circle</span>
+              <span>Инженеры-конструкторы и 3D-проектирование</span>
+            </li>
+            <li class="hero__benefit">
+              <span class="icon hero__benefit-icon" aria-hidden="true">check_circle</span>
+              <span>Доставка по России и странам СНГ</span>
+            </li>
+          </ul>
+
+          <div class="hero__actions">
+            <a class="btn btn--gold btn--lg hero__cta" href="#contact">Получить расчёт за 1 день</a>
+            <a class="hero__phone" href="tel:+74732051307">
+              <span class="icon hero__phone-icon" aria-hidden="true">call</span>
+              <span class="hero__phone-group">
+                <span class="hero__phone-caption">или позвоните</span>
+                <span class="hero__phone-number">+7 (473) 205-13-07</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Свойства полипропилена — шаг 8 -->
+    <section class="properties" id="properties">
+      <div class="container">
+
+        <div class="properties__head reveal">
+          <h2 class="properties__title">Металл корродирует. Полипропилен — работает</h2>
+          <p class="properties__lead">Металлические ёмкости, ванны и воздуховоды ржавеют, тяжелы и дороги в обслуживании. Полипропилен — проверенный временем материал, который не боится большинства кислот, щелочей и органических растворителей, служит до 30 лет и не требует антикоррозионной обработки.</p>
+        </div>
+
+        <ul class="properties__grid reveal">
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">shield</span>
+            <h3 class="property-card__title">Коррозионная стойкость</h3>
+            <p class="property-card__text">Устойчив ко многим кислотам, щелочам, солям и органическим растворителям.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">science</span>
+            <h3 class="property-card__title">Химическая инертность</h3>
+            <p class="property-card__text">Не вступает в реакцию с содержимым, сохраняет чистоту сред.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">flight_takeoff</span>
+            <h3 class="property-card__title">Лёгкий вес</h3>
+            <p class="property-card__text">Изделия значительно легче металлических аналогов, проще в транспортировке и монтаже.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">eco</span>
+            <h3 class="property-card__title">Экологичность</h3>
+            <p class="property-card__text">Безопасен для человека и окружающей среды, разрешён для питьевой воды и пищевых продуктов.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">bolt</span>
+            <h3 class="property-card__title">Диэлектрические свойства</h3>
+            <p class="property-card__text">Не проводит ток, исключает блуждающие токи.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">thermostat</span>
+            <h3 class="property-card__title">Диапазон температур</h3>
+            <p class="property-card__text">От −20 °C до +100 °C, стабильность в зависимости от условий эксплуатации.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">cleaning_services</span>
+            <h3 class="property-card__title">Простота обслуживания</h3>
+            <p class="property-card__text">Гладкая поверхность легко очищается, не требует антикоррозионной обработки.</p>
+          </li>
+          <li class="property-card">
+            <span class="icon property-card__icon" aria-hidden="true">schedule</span>
+            <h3 class="property-card__title">Срок службы</h3>
+            <p class="property-card__text">До 30 лет (зависит от условий эксплуатации и правильности монтажа).</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Продукция (каталог + слайдер) — шаг 9.
+         Под-якоря карточек (#product-*) зафиксированы в меню и мобильном
+         аккордеоне. Каталог — слайдер на ванильном JS (assets/js/main.js):
+         на desktop стрелки + прокрутка, на мобильных — свайп, точки-индикаторы.
+         Фото продукции — assets/images/product-*.jpg (перенесены на шаге 9);
+         при отсутствии файла карточка показывает нейтральную CSS-заглушку. -->
+    <section class="products" id="products">
+      <div class="container">
+
+        <div class="products__head reveal">
+          <h2 class="products__title">Полимерное оборудование под вашу задачу</h2>
+          <p class="products__lead">Спроектируем и изготовим по вашему ТЗ — от накопления сырья до отвода агрессивных паров. Каждое изделие — индивидуальный расчёт и производство полного цикла.</p>
+        </div>
+
+        <div class="products__slider reveal">
+          <div class="products__viewport" role="region" aria-label="Каталог продукции" tabindex="0">
+            <ul class="products__track">
+
+              <li class="products__slide" id="product-tanks">
+                <article class="product-card">
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="assets/images/product-tanks.jpg" alt="Ёмкости и резервуары из полипропилена" width="600" height="860" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <div class="product-card__heading">
+                      <span class="icon product-card__icon" aria-hidden="true">water_full</span>
+                      <h3 class="product-card__title">Ёмкости и резервуары</h3>
+                    </div>
+                    <p class="product-card__text">Спроектируем и изготовим ёмкость любой конфигурации под вашу задачу — от накопления сырья до хранения готовой продукции. Подбор конструкции — индивидуально по ТЗ.</p>
+                    <div class="product-card__price">
+                      <span class="product-card__price-label">Цена-ориентир</span>
+                      <span class="product-card__price-value">[от 45 000 ₽]</span>
+                    </div>
+                    <a class="btn btn--primary product-card__cta" href="#contact">Получить расчёт ёмкости</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__slide" id="product-baths">
+                <article class="product-card">
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="assets/images/product-baths.jpg" alt="Технологические ванны из полипропилена" width="600" height="860" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <div class="product-card__heading">
+                      <span class="icon product-card__icon" aria-hidden="true">waves</span>
+                      <h3 class="product-card__title">Технологические ванны</h3>
+                    </div>
+                    <p class="product-card__text">Ванны для гальванических и травильных линий, которые выдерживают агрессивные растворы и не меняют состав среды. Изготавливаем строго по ТЗ.</p>
+                    <div class="product-card__price">
+                      <span class="product-card__price-label">Цена-ориентир</span>
+                      <span class="product-card__price-value">[от 45 000 ₽]</span>
+                    </div>
+                    <a class="btn btn--primary product-card__cta" href="#contact">Получить расчёт ванны</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__slide" id="product-airducts">
+                <article class="product-card">
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="assets/images/product-airducts.jpg" alt="Полимерные воздуховоды и газоотводы" width="600" height="860" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <div class="product-card__heading">
+                      <span class="icon product-card__icon" aria-hidden="true">air</span>
+                      <h3 class="product-card__title">Воздуховоды и газоотводы</h3>
+                    </div>
+                    <p class="product-card__text">Полимерные воздуховоды — современная замена металлической вентиляции. Не ржавеют, дают меньше конденсата и теплопотерь, легче и дешевле в обслуживании. Стыкуются с системами вентиляции «по месту» без доработок.</p>
+                    <div class="product-card__price">
+                      <span class="product-card__price-label">Цена-ориентир</span>
+                      <span class="product-card__price-value">[от 45 000 ₽]</span>
+                    </div>
+                    <a class="btn btn--primary product-card__cta" href="#contact">Получить расчёт воздуховода</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__slide" id="product-heat-exchangers">
+                <article class="product-card">
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="assets/images/product-heat-exchangers.jpg" alt="Фторопластовый теплообменник" width="600" height="860" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <div class="product-card__heading">
+                      <span class="icon product-card__icon" aria-hidden="true">device_thermostat</span>
+                      <h3 class="product-card__title">Фторопластовые теплообменники</h3>
+                    </div>
+                    <p class="product-card__text">Инженерный расчёт каждого теплообменника под ваши условия — оптимальный вариант по цене и срокам.</p>
+                    <div class="product-card__price">
+                      <span class="product-card__price-label">Цена-ориентир</span>
+                      <span class="product-card__price-value">[от 45 000 ₽]</span>
+                    </div>
+                    <a class="btn btn--primary product-card__cta" href="#contact">Запросить расчёт теплообменника</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="products__slide" id="product-pallets">
+                <article class="product-card">
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="assets/images/product-pallets.jpg" alt="Кислотостойкий поддон из полипропилена" width="800" height="455" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <div class="product-card__heading">
+                      <span class="icon product-card__icon" aria-hidden="true">layers</span>
+                      <h3 class="product-card__title">Поддоны кислотостойкие</h3>
+                    </div>
+                    <p class="product-card__text">Надёжная защита от протечек кислот и щелочей — выдерживают контакт с агрессивными средами и не трескаются при падении.</p>
+                    <div class="product-card__price">
+                      <span class="product-card__price-label">Цена-ориентир</span>
+                      <span class="product-card__price-value">[от 45 000 ₽]</span>
+                    </div>
+                    <a class="btn btn--primary product-card__cta" href="#contact">Получить расчёт поддона</a>
+                  </div>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+
+          <button class="products__arrow products__arrow--prev" type="button" aria-label="Предыдущий слайд">
+            <span class="icon" aria-hidden="true">arrow_back</span>
+          </button>
+          <button class="products__arrow products__arrow--next" type="button" aria-label="Следующий слайд">
+            <span class="icon" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+
+        <div class="products__dots reveal" aria-label="Слайды продукции">
+          <button class="products__dot products__dot--active" type="button" aria-current="true" aria-label="Ёмкости и резервуары"></button>
+          <button class="products__dot" type="button" aria-current="false" aria-label="Технологические ванны"></button>
+          <button class="products__dot" type="button" aria-current="false" aria-label="Воздуховоды и газоотводы"></button>
+          <button class="products__dot" type="button" aria-current="false" aria-label="Фторопластовые теплообменники"></button>
+          <button class="products__dot" type="button" aria-current="false" aria-label="Поддоны кислотостойкие"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Процесс работы — шаг 10.
+         Источник — PROTOTYPE.md, раздел 7 «Как мы работаем» + раздел 15
+         (иконки «Процесс работы (5)»). 5 этапов полного цикла + строка сроков. -->
+    <section class="process" id="process">
+      <div class="container">
+
+        <div class="process__head reveal">
+          <h2 class="process__title">Как мы работаем</h2>
+          <p class="process__lead">Полный цикл в одних руках — от первой консультации до доставки и монтажа. Пять понятных этапов, каждый из которых согласовываем с вами.</p>
+        </div>
+
+        <ol class="process__steps reveal">
+          <li class="process-step">
+            <div class="process-step__top">
+              <span class="icon process-step__icon" aria-hidden="true">forum</span>
+              <span class="process-step__number" aria-hidden="true">01</span>
+            </div>
+            <h3 class="process-step__title">Консультация и анализ ТЗ</h3>
+            <p class="process-step__text">Эскиз, чертёж, опросный лист или описание задачи.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__top">
+              <span class="icon process-step__icon" aria-hidden="true">design_services</span>
+              <span class="process-step__number" aria-hidden="true">02</span>
+            </div>
+            <h3 class="process-step__title">Проектирование</h3>
+            <p class="process-step__text">Инженеры-конструкторы разрабатывают 3D-модель и чертежи, согласовывают с вами.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__top">
+              <span class="icon process-step__icon" aria-hidden="true">precision_manufacturing</span>
+              <span class="process-step__number" aria-hidden="true">03</span>
+            </div>
+            <h3 class="process-step__title">Изготовление</h3>
+            <p class="process-step__text">Раскрой листового полипропилена на высокоточных станках, автоматическая сварка и сварка экструдером (шов близок к прочности материала).</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__top">
+              <span class="icon process-step__icon" aria-hidden="true">verified_user</span>
+              <span class="process-step__number" aria-hidden="true">04</span>
+            </div>
+            <h3 class="process-step__title">Контроль качества</h3>
+            <p class="process-step__text">Проверка геометрии и герметичности (гидроиспытания или искровой контроль сварных швов).</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__top">
+              <span class="icon process-step__icon" aria-hidden="true">local_shipping</span>
+              <span class="process-step__number" aria-hidden="true">05</span>
+            </div>
+            <h3 class="process-step__title">Доставка и монтаж</h3>
+            <p class="process-step__text">Бережная транспортировка по России и странам СНГ, рекомендации по установке.</p>
+          </li>
+        </ol>
+
+        <div class="process__timing reveal">
+          <p class="process__timing-item">
+            <span class="icon process__timing-icon" aria-hidden="true">schedule</span>
+            <span class="process__timing-text">Срок изготовления — <strong class="process__timing-value">[от 7 рабочих дней]</strong></span>
+          </p>
+          <p class="process__timing-item">
+            <span class="icon process__timing-icon" aria-hidden="true">calculate</span>
+            <span class="process__timing-text">Расчёт стоимости — <strong class="process__timing-value">1 рабочий день</strong></span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Доверие (цифры / отрасли / сертификаты / кейсы) — шаг 11.
+         Источник — PROTOTYPE.md, раздел 3 «Полоса доверия» + раздел 9 «Доверие»
+         + раздел 15 (иконки «Доверие»: groups / bar_chart / workspace_premium /
+         photo_library). Демо-данные — в [скобках]. -->
+    <section class="trust" id="trust">
+      <div class="container">
+
+        <div class="trust__head reveal">
+          <h2 class="trust__title">Нам доверяют производства с агрессивными средами</h2>
+          <p class="trust__lead">Делаем оборудование для кислот и щелочей — гальваника, химия, очистные сооружения, пищевая и фармацевтика. Ниже — цифры, стандарты и кейсы, которые это подтверждают.</p>
+        </div>
+
+        <!-- Полоса цифр (раздел 3 + 9.2 прототипа) -->
+        <div class="trust__stats reveal">
+          <div class="trust__block-head">
+            <span class="icon trust__block-icon" aria-hidden="true">bar_chart</span>
+            <h3 class="trust__block-title">Мы в цифрах</h3>
+          </div>
+          <ul class="trust__stats-list">
+            <li class="trust__stat">
+              <span class="trust__stat-value trust__stat-value--gold">[25]</span>
+              <span class="trust__stat-label">лет на рынке</span>
+            </li>
+            <li class="trust__stat">
+              <span class="trust__stat-value trust__stat-value--gold">[500]</span>
+              <span class="trust__stat-label">изготовленных изделий</span>
+            </li>
+            <li class="trust__stat">
+              <span class="trust__stat-value">Полный цикл</span>
+              <span class="trust__stat-label">проектирование → производство → контроль → доставка</span>
+            </li>
+            <li class="trust__stat">
+              <span class="trust__stat-value">Доставка</span>
+              <span class="trust__stat-label">по России и странам СНГ</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Отрасли + сертификаты (две колонки) -->
+        <div class="trust__columns reveal">
+
+          <div class="trust__industries">
+            <div class="trust__block-head">
+              <span class="icon trust__block-icon" aria-hidden="true">groups</span>
+              <h3 class="trust__block-title">Кому уже делали</h3>
+            </div>
+            <ul class="trust__industries-list">
+              <li class="trust__industry">
+                <span class="trust__industry-name">Гальванические производства</span>
+                <span class="trust__industry-detail">хромирование, никелирование, анодирование</span>
+              </li>
+              <li class="trust__industry">
+                <span class="trust__industry-name">Химические производства</span>
+                <span class="trust__industry-detail">приготовление и хранение реагентов</span>
+              </li>
+              <li class="trust__industry">
+                <span class="trust__industry-name">Очистные сооружения</span>
+                <span class="trust__industry-detail">абсорберы, ванны нейтрализации, отстойники</span>
+              </li>
+              <li class="trust__industry">
+                <span class="trust__industry-name">Пищевая промышленность</span>
+                <span class="trust__industry-detail">мойка, обработка, хранение продукта</span>
+              </li>
+              <li class="trust__industry">
+                <span class="trust__industry-name">Лаборатории и фармацевтика</span>
+                <span class="trust__industry-detail">вытяжные шкафы, чистые помещения</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="trust__certs">
+            <div class="trust__block-head">
+              <span class="icon trust__block-icon" aria-hidden="true">workspace_premium</span>
+              <h3 class="trust__block-title">Сертификаты и стандарты</h3>
+            </div>
+            <p class="trust__certs-badge">[ГОСТ Р 55072 · ISO 9001:2015]</p>
+            <p class="trust__certs-note">Пример списка сертификатов — заменим на реальные.</p>
+          </div>
+
+        </div>
+
+        <!-- Кейсы «до/после» (раздел 9.4 прототипа) -->
+        <div class="trust__cases reveal">
+          <div class="trust__block-head">
+            <span class="icon trust__block-icon" aria-hidden="true">photo_library</span>
+            <h3 class="trust__block-title">Кейсы: до и после</h3>
+          </div>
+          <ul class="trust__cases-grid">
+
+            <li class="trust-case">
+              <div class="trust-case__media">
+                <figure class="trust-case__photo trust-case__photo--before">
+                  <figcaption class="trust-case__tag">До</figcaption>
+                </figure>
+                <figure class="trust-case__photo trust-case__photo--after">
+                  <figcaption class="trust-case__tag">После</figcaption>
+                </figure>
+              </div>
+              <h4 class="trust-case__title">[Ёмкость 10 м³ для гальванического производства]</h4>
+              <p class="trust-case__location">[Воронежская область]</p>
+            </li>
+
+            <li class="trust-case">
+              <div class="trust-case__media">
+                <figure class="trust-case__photo trust-case__photo--before">
+                  <figcaption class="trust-case__tag">До</figcaption>
+                </figure>
+                <figure class="trust-case__photo trust-case__photo--after">
+                  <figcaption class="trust-case__tag">После</figcaption>
+                </figure>
+              </div>
+              <h4 class="trust-case__title">[Линия травления из 6 технологических ванн]</h4>
+              <p class="trust-case__location">[Химический завод]</p>
+            </li>
+
+            <li class="trust-case">
+              <div class="trust-case__media">
+                <figure class="trust-case__photo trust-case__photo--before">
+                  <figcaption class="trust-case__tag">До</figcaption>
+                </figure>
+                <figure class="trust-case__photo trust-case__photo--after">
+                  <figcaption class="trust-case__tag">После</figcaption>
+                </figure>
+              </div>
+              <h4 class="trust-case__title">[Система воздуховодов для очистных сооружений]</h4>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Возражения — шаг 12.
+         Источник — PROTOTYPE.md, раздел 10 «Обработка возражений» + раздел 15
+         (иконки Material Symbols). 5 карточек-возражений; демо-данные — в [скобках].
+         Карточки контентные, без анимаций появления. -->
+    <section class="objections" id="objections">
+      <div class="container">
+
+        <div class="objections__head reveal">
+          <h2 class="objections__title">Сомневаетесь? Снимаем возражения</h2>
+          <p class="objections__lead">Собрали пять самых частых сомнений перед заказом — отвечаем коротко и по делу, с цифрами и фактами.</p>
+        </div>
+
+        <ul class="objections__grid reveal">
+
+          <li class="objection-card">
+            <span class="icon objection-card__icon" aria-hidden="true">payments</span>
+            <h3 class="objection-card__title">Дорого?</h3>
+            <p class="objection-card__text">Цена зависит от габаритов, материала и сложности. Ориентир — [от 45 000 ₽]. В эксплуатации полипропилен дешевле металла: нет коррозии и антикоррозионной обработки, срок службы до 30 лет. Расчёт — бесплатно, за 1 рабочий день.</p>
+          </li>
+
+          <li class="objection-card">
+            <span class="icon objection-card__icon" aria-hidden="true">timer</span>
+            <h3 class="objection-card__title">Долго?</h3>
+            <p class="objection-card__text">Срок изготовления — [от 7 рабочих дней]. Соблюдаем сроки и согласовываем каждый этап.</p>
+          </li>
+
+          <li class="objection-card">
+            <span class="icon objection-card__icon" aria-hidden="true">local_shipping</span>
+            <h3 class="objection-card__title">Как доставка?</h3>
+            <p class="objection-card__text">Доставляем по всей России и в страны СНГ. Бережная транспортировка и рекомендации по установке.</p>
+          </li>
+
+          <li class="objection-card">
+            <span class="icon objection-card__icon" aria-hidden="true">verified</span>
+            <h3 class="objection-card__title">Есть ли сертификаты/ГОСТ?</h3>
+            <p class="objection-card__text">[ГОСТ Р 55072 · ISO 9001:2015] — пример списка. Каждое изделие проходит контроль качества: проверка геометрии, герметичности, гидроиспытания и искровой контроль сварных швов.</p>
+          </li>
+
+          <li class="objection-card">
+            <span class="icon objection-card__icon" aria-hidden="true">construction</span>
+            <h3 class="objection-card__title">У нас нестандартная задача</h3>
+            <p class="objection-card__text">Это наша специализация. Проектируем по эскизу, чертежу или опросному листу — любой конфигурации и сложности.</p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Вопросы и ответы (FAQ) — шаг 12.
+         Источник — PROTOTYPE.md, раздел 11 «Вопросы и ответы» + раздел 15
+         (иконка quiz). Семантичный аккордеон на нативном <details>/<summary> —
+         без внешних библиотек и без JS. Демо-данные — в [скобках]. -->
+    <section class="faq" id="faq">
+      <div class="container">
+
+        <div class="faq__head reveal">
+          <div class="faq__heading">
+            <span class="icon faq__icon" aria-hidden="true">quiz</span>
+            <h2 class="faq__title">Вопросы и ответы</h2>
+          </div>
+          <p class="faq__lead">Коротко о ценах, сроках, материалах и гарантии. Не нашли свой вопрос — позвоните или запросите расчёт.</p>
+        </div>
+
+        <div class="faq__list reveal">
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Сколько стоит изготовление?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Стоимость зависит от габаритов, материала и сложности. Ориентир — [от 45 000 ₽]. Точный расчёт сделаем за 1 рабочий день — бесплатно.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Какие сроки изготовления?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>[От 7 рабочих дней] в зависимости от сложности и загрузки производства.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Работаете ли вы с физлицами?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Работаем с [юридическими лицами и ИП].</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Из каких материалов изготавливаете?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Полипропилен, полиэтилен низкого давления (ПНД), фторопласт (для теплообменников).</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Доставляете ли в другие регионы и СНГ?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Да, доставляем по всей России и в страны СНГ.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Можно ли изготовить по моему чертежу или эскизу?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Да. Принимаем эскиз, чертёж, опросный лист или описание задачи и проектируем под ваши условия.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Есть ли гарантия?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Да, гарантия [12 месяцев]. Каждое изделие проходит контроль качества перед отгрузкой.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Работаете с агрессивными средами (кислоты, щелочи)?</span>
+              <span class="icon faq__caret" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Да, это наша специализация — оборудование для кислот, щелочей и особо чистых сред.</p>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Форма + контакты — шаг 13.
+         Источник — PROTOTYPE.md, раздел 12 «Форма / мини-квиз» + раздел 13
+         «Контакты / подвал» (единый NAP) + раздел 15 (иконки «Сервисные
+         блоки»: calculate / call / send). Только вёрстка: <form> без action и
+         без JS-обработчика отправки (CTA — type="button"); скрытые utm-поля —
+         на этап интеграции. -->
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <div class="contact__head reveal">
+          <div class="contact__heading">
+            <span class="icon contact__icon" aria-hidden="true">calculate</span>
+            <h2 class="contact__title">Получите расчёт за 1 рабочий день</h2>
+          </div>
+          <p class="contact__lead">Опишите задачу — инженер уточнит детали, посчитает стоимость и сроки. Расчёт бесплатный и ни к чему не обязывает.</p>
+        </div>
+
+        <div class="contact__grid reveal">
+
+          <!-- Мини-квиз (раздел 12 прототипа): 4 шага одной формой, без
+               пошаговой JS-навигации. Поля названы для будущей интеграции. -->
+          <form class="contact-form" id="contact-form" novalidate>
+
+            <ol class="contact-form__steps">
+
+              <li class="contact-form__step">
+                <fieldset class="contact-form__fieldset">
+                  <legend class="contact-form__legend">
+                    <span class="contact-form__step-num" aria-hidden="true">1</span>
+                    <span>Что нужно изготовить?</span>
+                  </legend>
+                  <div class="contact-form__options">
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="tank">
+                      <span>Ёмкость / резервуар</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="bath">
+                      <span>Технологическая ванна</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="airduct">
+                      <span>Воздуховод / газоотвод</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="heat-exchanger">
+                      <span>Фторопластовый теплообменник</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="pallet">
+                      <span>Поддон</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="product_type" value="other">
+                      <span>Другое / не знаю</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+
+              <li class="contact-form__step">
+                <fieldset class="contact-form__fieldset">
+                  <legend class="contact-form__legend">
+                    <span class="contact-form__step-num" aria-hidden="true">2</span>
+                    <span>Материал</span>
+                  </legend>
+                  <div class="contact-form__options">
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="material" value="pp">
+                      <span>Полипропилен</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="material" value="hdpe">
+                      <span>ПНД</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="material" value="fluoroplastic">
+                      <span>Фторопласт</span>
+                    </label>
+                    <label class="contact-form__option">
+                      <input class="contact-form__radio" type="radio" name="material" value="consult">
+                      <span>Нужна консультация</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+
+              <li class="contact-form__step">
+                <fieldset class="contact-form__fieldset">
+                  <legend class="contact-form__legend">
+                    <span class="contact-form__step-num" aria-hidden="true">3</span>
+                    <span>Параметры</span>
+                  </legend>
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-params">Ориентировочные размеры / объём</label>
+                    <textarea class="contact-form__textarea" id="contact-params" name="params" rows="3" placeholder="Например: ёмкость 2 м³, 1200×1200×1500 мм, рабочая среда — серная кислота"></textarea>
+                  </div>
+                  <div class="contact-form__field">
+                    <span class="contact-form__label" id="contact-file-label">Файл (чертёж / ТЗ / эскиз / фото)</span>
+                    <label class="contact-form__file" for="contact-file">
+                      <span class="icon contact-form__file-icon" aria-hidden="true">attach_file</span>
+                      <span class="contact-form__file-text">Прикрепить файл</span>
+                      <input class="contact-form__file-input visually-hidden" id="contact-file" name="file" type="file" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.webp,image/*,application/pdf">
+                    </label>
+                    <p class="contact-form__hint">Необязательно: чертёж, ТЗ, эскиз или фото помогут точнее посчитать.</p>
+                  </div>
+                </fieldset>
+              </li>
+
+              <li class="contact-form__step">
+                <fieldset class="contact-form__fieldset">
+                  <legend class="contact-form__legend">
+                    <span class="contact-form__step-num" aria-hidden="true">4</span>
+                    <span>Контакты</span>
+                  </legend>
+                  <div class="contact-form__fields">
+                    <div class="contact-form__field">
+                      <label class="contact-form__label" for="contact-name">Имя</label>
+                      <input class="contact-form__input" id="contact-name" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="contact-form__field">
+                      <label class="contact-form__label" for="contact-phone">Телефон</label>
+                      <input class="contact-form__input" id="contact-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="contact-form__field">
+                      <label class="contact-form__label" for="contact-email">E-mail</label>
+                      <input class="contact-form__input" id="contact-email" name="email" type="email" autocomplete="email" required placeholder="name@company.ru">
+                    </div>
+                    <div class="contact-form__field">
+                      <label class="contact-form__label" for="contact-company">Компания <span class="contact-form__optional">(необязательно)</span></label>
+                      <input class="contact-form__input" id="contact-company" name="company" type="text" autocomplete="organization" placeholder="Название компании">
+                    </div>
+                  </div>
+                </fieldset>
+              </li>
+
+            </ol>
+
+            <!-- CTA без отправки (type="button"): обработчик — на этап интеграции.
+                 Скрытые utm-поля (utm_source / utm_campaign и др.) добавим там же. -->
+            <div class="contact-form__footer">
+              <button class="btn btn--gold btn--lg contact-form__submit" type="button">
+                <span class="icon" aria-hidden="true">send</span>
+                <span>Получить расчёт</span>
+              </button>
+              <p class="contact-form__privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+            </div>
+
+          </form>
+
+          <!-- Альтернатива — позвонить (раздел 12 прототипа) -->
+          <aside class="contact__aside">
+            <h3 class="contact__aside-title">Удобнее по телефону?</h3>
+            <p class="contact__aside-text">Позвоните — ответим на вопросы и сразу сориентируем по цене и срокам.</p>
+            <a class="contact__phone" href="tel:+74732051307">
+              <span class="icon contact__phone-icon" aria-hidden="true">call</span>
+              <span class="contact__phone-number">+7 (473) 205-13-07</span>
+            </a>
+            <a class="contact__email" href="mailto:gazhim@gazhim.ru">
+              <span class="icon contact__email-icon" aria-hidden="true">mail</span>
+              <span class="contact__email-value">gazhim@gazhim.ru</span>
+            </a>
+            <p class="contact__geo">Работаем по всей России и странам СНГ</p>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал — шаг 13.
+       Источник — PROTOTYPE.md, раздел 13 «Контакты / подвал» (единый NAP) +
+       раздел 15 (иконки call / mail / location_on). Ссылки «Импортозамещение»,
+       «Инжиниринг» и «Политика конфиденциальности» ведут на страницы основного
+       сайта gazhim.ru — точные URL уточнить на этапе интеграции. -->
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <!-- Бренд -->
+        <div class="footer__brand">
+          <a class="footer__logo" href="#hero">
+            <img class="footer__logo-img" src="assets/images/logo-footer.png" alt="Газхимкомплект" width="299" height="50">
+          </a>
+          <p class="footer__company">ООО «Газхимкомплект»</p>
+          <p class="footer__geo">Работаем по всей России и странам СНГ</p>
+        </div>
+
+        <!-- Контакты -->
+        <div class="footer__col">
+          <h2 class="footer__title">Контакты</h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__contact" href="tel:+74732051307">
+                <span class="icon footer__contact-icon" aria-hidden="true">call</span>
+                <span>+7 (473) 205-13-07</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__contact" href="mailto:gazhim@gazhim.ru">
+                <span class="icon footer__contact-icon" aria-hidden="true">mail</span>
+                <span>gazhim@gazhim.ru</span>
+              </a>
+            </li>
+            <li class="footer__item footer__item--address">
+              <span class="icon footer__contact-icon" aria-hidden="true">location_on</span>
+              <span>397160, Воронежская область, г. Борисоглебск, ул. Пролетарская, 22</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Реквизиты -->
+        <div class="footer__col">
+          <h2 class="footer__title">Реквизиты</h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <span class="footer__label">ИНН</span>
+              <span>3609003557</span>
+            </li>
+            <li class="footer__item">
+              <span class="footer__label">ОГРН</span>
+              <span>1023600613740</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ссылки -->
+        <nav class="footer__col footer__nav" aria-label="Ссылки в подвале">
+          <h2 class="footer__title">Информация</h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="https://gazhim.ru" target="_blank" rel="noopener">Основной сайт</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Импортозамещение</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Инжиниринг</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 ООО «Газхимкомплект». Все права защищены.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Кнопка «наверх» — шаг 14.
+       JS (assets/js/main.js) вешает .to-top--visible при прокрутке (порог 600px)
+       и скроллит вверх по клику. -->
+  <button class="to-top" type="button" aria-label="Наверх">
+    <span class="icon" aria-hidden="true">arrow_upward</span>
+  </button>
+
+</body>
+</html>
